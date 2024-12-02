@@ -1,0 +1,467 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Estilo del ícono de ratón */
+.mouse-pointer {
+    position: absolute;
+    top: 55%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    z-index: 1001; /* Asegúrate de que el ícono esté por encima de otros elementos */
+    animation: pulse 1.5s infinite; /* Animación para hacerlo parpadear */
+}
+
+.mouse-pointer img {
+    width: 50px;
+    height: auto;
+}
+
+/* Animación de parpadeo para atraer la atención */
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+
+
+h2 {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header {
+    display: none;  /* Ocultamos el header por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 12px 0 !important;  /* Añadir !important para forzar la propiedad */
+    z-index: 1000;  /* Asegúrate de que quede por encima de otros elementos */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 12px !important;  /* Añadir !important para forzar la propiedad */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem !important;  /* Añadir !important para forzar la propiedad */
+    font-weight: bold;
+    padding: 6px 0 !important;  /* Añadir !important para forzar la propiedad */
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Estilos para la interfaz inicial */
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px), 
+                      radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+   
+}
+
+.image-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circular-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+   
+}
+
+.white-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: none;
+    z-index: 9999;
+}
+
+/* Ocultar el portafolio inicialmente */
+.container {
+    display: none;
+}
+
+/* Estilos para cuando el portafolio está activo */
+body.portafolio-active .container {
+    display: block;
+}
+
+body.portafolio-active .intro-container {
+    display: none;
+}
+
+/* Portafolio (estilos ya existentes) */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #001a4b;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    color: rgb(255, 255, 255, 100);
+    background-color: rgba(0, 26, 75, 100); /* Fondo oscuro con opacidad */
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px); /* Textura con opacidad */
+    background-size: 7px 7px; /* Ajusta el tamaño de los puntos */
+    background-position: bottom center; /* Coloca la textura en la parte inferior */
+}
+
+
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000d30;
+}
+
+
+
+
+.presentation {
+    text-align: center;
+    padding: 100px 0;
+   
+}
+
+
+
+
+.presentation img {
+    width: 540px;
+    height: 510px;
+    border-radius: 50%;
+    margin-bottom: 70px;
+    display: block; /* Hace que la imagen ocupe toda su propia línea */
+    position: relative; /* Se posiciona relativa a su contenedor */
+    left: 180px; /* Espaciado desde el borde izquierdo */
+}
+
+.presentation {
+    position: relative; /* Establece el contenedor como referencia para los elementos posicionados de manera absoluta */
+}
+
+.titulo-principal {
+    font-size: 4rem;  /* Tamaño del texto */
+    font-weight: bold;  /* Negrita */
+    top: 150px;
+    right: 100px;
+    color: #ffffff;  /* Color del texto */
+    margin: 20px 0;  /* Espaciado alrededor del texto */
+    text-align: center;  /* Centrado del texto */
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   letter-spacing: 3px;
+  
+
+}
+
+.presentation h2 {
+    position: absolute; /* Saca el título del flujo normal */
+    top: 400px; /* Ajusta la distancia desde el borde superior */
+    right: 200px; /* Ajusta la distancia desde el borde derecho */
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center; /* Alinea el título al lado derecho */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.presentation p {
+    position: absolute; /* Saca el párrafo del flujo normal */
+    top: 450px; /* Ajusta la distancia desde el borde superior (debajo del título) */
+    right: 123px; /* Ajusta la distancia desde el borde derecho */
+    font-size: 1.1rem;
+    color: #aaa;
+    text-align: center; /* Alinea el párrafo al lado derecho */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Alineación y estilo para el contenedor de la cuadrícula de proyectos */
+.projects {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Hace que ocupe toda la altura de la pantalla */
+    padding: 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%; /* Ocupa el 80% del ancho disponible */
+    max-width: 800px; /* Limita el tamaño máximo a 800px */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto; /* Centra el proyecto horizontalmente */
+}
+
+/* Cuando se pasa el ratón sobre el proyecto, aumenta ligeramente */
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para centrar el video */
+.video-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Hace que ocupe toda la altura de la pantalla */
+  }
+  
+  .video-box {
+    position:absolute;
+    width: 60%; /* Controla el ancho del video */
+    max-width: 800px; /* Controla el tamaño máximo */
+    padding-top: 33.75%; /* Relación de aspecto 16:9 */
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 250px;
+
+  }
+  
+  .video-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+ 
+  }
+  
+
+
+
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fondo oscuro para toda la página */
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+/* Contenedor de la imagen */
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    height: 100vh; /* Hace que el contenedor ocupe toda la altura de la pantalla */
+    position: relative; /* Asegura que los elementos dentro puedan ser posicionados */
+    overflow: visible; /* Asegura que no haya recortes no deseados */
+}
+
+/* Imagen interactiva */
+.interactive-image {
+    position: relative; /* Permite el desplazamiento desde su posición inicial */
+    max-width: 200%; /* Ajusta el ancho de la imagen para que no se estire más de lo necesario */
+    height: auto; /* Mantiene la relación de aspecto original */
+    border-radius: 0; /* Asegura que no haya bordes redondeados */
+    margin: auto; /* Asegura que la imagen esté centrada en el contenedor */
+    top: 10px; /* Mueve la imagen 50px hacia abajo */
+    left: 320px; /* Mueve la imagen 320px hacia la derecha */
+    z-index: 1; /* Asegura que la imagen esté por encima del fondo */
+}
+
+/* Cuadrado con fondo encima de la imagen */
+.square-background {
+    position: absolute; /* Permite mover el cuadrado encima de la imagen */
+    top: 80px; /* Ajusta la posición desde la parte superior */
+    left: 50px; /* Ajusta la posición desde la izquierda */
+    width: 1200px; /* Ancho del cuadrado */
+    height: 500px; /* Alto del cuadrado */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente negro */
+    border-radius: 5px; /* Opcional: agrega bordes redondeados al cuadrado */
+}
+
+.video-container {
+    display: grid; /* Usamos grid para el diseño */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: -500px; /* Espacio entre los videos */
+    margin: 10px 0; /* Margen superior e inferior */
+}
+
+.video {
+    flex: 0 1 calc(10% - 20px); /* Cada video ocupa 23% del ancho disponible */
+    aspect-ratio: 16 / 9; /* Relación de aspecto */
+    overflow: hidden; /* Evita desbordamientos */
+    border-radius: 8px; /* Esquinas redondeadas */
+    margin-bottom: -400px;
+
+  
+}
+
+.video.vertical {
+    aspect-ratio: 9 / 16; /* Ajusta los videos verticales */
+}
+
+.video iframe {
+    width: 40%; /* Ocupa todo el contenedor */
+    height: 40%; /* Se ajusta a la altura */
+    margin-left: 400px;
+    margin: -500;
+    
+}
+
+
+
+.photography-section {
+    text-align: center; /* Centra el título y el contenido */
+    margin-top: -40px; /* Ajusta el margen superior para acercar el título */
+    margin-bottom: 20px; /* Ajusta el margen inferior para reducir el espacio debajo del título */
+}
+
+.photography-section h2 {
+    font-size: 36px; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+    margin-top: 0; /* Elimina el margen superior */
+    margin-bottom: 10px; /* Ajusta el margen inferior para que el texto esté más cerca de las imágenes */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.photos-container {
+    display: flex; /* Organiza las fotos en una fila */
+    justify-content: center; /* Centra las fotos horizontalmente */
+    gap: 20px; /* Ajusta el espacio entre las imágenes */
+    margin-top: 20px; /* Ajusta el margen superior de las fotos */
+    padding: 0; /* Elimina cualquier padding adicional */
+}
+
+.photo {
+    width: 25%; /* Ajusta el ancho de cada imagen */
+    overflow: visible; /* Asegura que no se recorte ningún contenido de las imágenes */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Agrega sombra para dar profundidad */
+}
+
+.photo img {
+    width: 100%; /* La imagen ocupa el 100% del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente para cubrir el contenedor */
+    border-radius: 10px; /* Esquinas redondeadas de la imagen */
+}
+
+
+.contact {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #000d30;
+    border-top: 2px solid #ffffff;
+}
+
+.contact a {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+    display: inline-flex;  /* Para alinear el texto e icono en fila */
+    align-items: center;  /* Alinea el icono y el texto verticalmente */
+    margin-bottom: 10px;
+}
+
+.contact a i {
+    margin-right: 8px;  /* Espacio entre el icono y el texto */
+    font-size: 1.5rem;  /* Tamaño más grande para los iconos */
+}
+
+.contact a:hover {
+    color: #f39c12;
+}
